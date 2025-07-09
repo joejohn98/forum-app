@@ -49,3 +49,5 @@ export const QuestionsProvider = ({
     </>
   )
 };
+
+export default QuestionsContext;
