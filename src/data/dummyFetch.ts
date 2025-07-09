@@ -1,8 +1,20 @@
+interface Question {
+    id: number;
+    question: string;
+    answer: string;
+}
+
+interface ApiResponse {
+    status: number;
+    message: string;
+    data: {
+        questions: Question[];
+    };
+}
 
 
 
-
-export const fakeFetch = (url: string) => {
+export const dummyFetch = (url: string): Promise<ApiResponse> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (url === "https://example.com/api/questions") {
