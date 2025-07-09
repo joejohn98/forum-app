@@ -1,4 +1,4 @@
-import { Children, createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { dummyFetch, type Question } from "../data/dummyFetch";
 
 interface QuestionsContextType {
