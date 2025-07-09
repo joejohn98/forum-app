@@ -6,7 +6,11 @@ const QuestionsList: React.FC = () => {
   const context = useContext(QuestionsContext);
 
   if (!context) {
-    return <p className="text-lg text-red-500 text-center mt-20">Context not found.</p>;
+    return (
+      <p className="text-lg text-red-500 text-center mt-20">
+        Context not found.
+      </p>
+    );
   }
 
   const { questions, isLoading, error } = context;
@@ -28,10 +32,12 @@ const QuestionsList: React.FC = () => {
           <li key={question.id} className="p-4 border rounded-md shadow-sm">
             <h2 className="text-lg font-medium">{question.question}</h2>
             <Link
-              className="text-blue-500 text-lg hover:underline mt-2 block"
+              className="text-blue-500 text-lg font-medium mt-2 block"
               to={`/answer/${question.id}`}
             >
-              <button className="cursor-pointer">Answer</button>
+              <button className="cursor-pointer hover:underline ">
+                Answer
+              </button>
             </Link>
           </li>
         ))}

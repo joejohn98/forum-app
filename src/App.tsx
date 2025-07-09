@@ -3,6 +3,7 @@ import { QuestionsProvider } from "./context/QuestionsContext";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import QuestionsList from "./pages/QuestionsList";
 import Home from "./pages/Home";
+import Answer from "./pages/Answer";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/questions" element={<QuestionsList />} />
+              <Route path="/answer/:id" element={<Answer />} />
+              
             </Routes>
           </div>
         </Router>
