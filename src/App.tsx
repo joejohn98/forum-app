@@ -5,6 +5,7 @@ import QuestionsList from "./pages/QuestionsList";
 import Home from "./pages/Home";
 import Answer from "./pages/Answer";
 import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/questions" element={<QuestionsList />} />
               <Route path="/answer/:id" element={<Answer />} />
-              <Route path="/about" element={<About />}/>
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </Router>
